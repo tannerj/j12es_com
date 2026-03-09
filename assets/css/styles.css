@@ -1,0 +1,221 @@
+/* ===== Base Reset ===== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  line-height: 1.6;
+  color: #222;
+  background: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: #007acc;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+/* ===== Layout Container ===== */
+.container {
+  width: 90%;
+  max-width: 900px;
+  margin: 2rem auto;
+}
+
+/* ===== Header ===== */
+.site-header {
+  border-bottom: 1px solid #eee;
+  padding: 1rem 0;
+}
+
+.header-inner {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.site-nav a {
+  margin-left: 1rem;
+  font-weight: 500;
+}
+
+/* ===== Post List ===== */
+.post-preview {
+  margin-bottom: 3rem;
+}
+
+.post-preview img {
+  width: 100%;
+  height: auto;
+  margin: 1rem 0;
+  border-radius: 6px;
+}
+
+.post-date {
+  font-size: 0.9rem;
+  color: #777;
+  margin-bottom: 0.5rem;
+}
+
+/* ===== Single Post ===== */
+.post img {
+  width: 100%;
+  margin: 1rem 0;
+  border-radius: 6px;
+}
+
+.post-content {
+  margin-top: 1rem;
+}
+
+/* ===== Footer ===== */
+.site-footer {
+  border-top: 1px solid #eee;
+  padding: 2rem 0;
+  margin-top: 3rem;
+}
+
+.footer-inner {
+  width: 90%;
+  max-width: 1100px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  text-align: center;
+}
+
+.social-links {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+}
+
+.social-links a {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-weight: 500;
+}
+
+.icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+}
+
+/* ===== Tablet and Up ===== */
+@media (min-width: 768px) {
+  .footer-inner {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .post-preview img {
+    max-height: 400px;
+    object-fit: cover;
+  }
+}
+
+/* ===== Navigation ===== */
+.site-nav {
+  display: none;
+  flex-direction: column;
+  gap: 1rem;
+  background: #fff;
+  position: absolute;
+  top: 70px;
+  right: 5%;
+  padding: 1rem;
+  border: 1px solid #eee;
+  border-radius: 6px;
+}
+
+.site-nav.active {
+  display: flex;
+}
+
+/* ===== Hamburger ===== */
+.menu-toggle {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.menu-toggle span {
+  width: 25px;
+  height: 3px;
+  background: #222;
+  transition: 0.3s ease;
+}
+
+/* Animate hamburger to X */
+.menu-toggle.open span:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.menu-toggle.open span:nth-child(2) {
+  opacity: 0;
+}
+
+.menu-toggle.open span:nth-child(3) {
+  transform: rotate(-45deg) translate(6px, -6px);
+}
+
+/* ===== Desktop Nav ===== */
+@media (min-width: 768px) {
+  .menu-toggle {
+    display: none;
+  }
+
+  .site-nav {
+    display: flex !important;
+    position: static;
+    flex-direction: row;
+    border: none;
+    padding: 0;
+  }
+
+  .site-nav a {
+    margin-left: 1.5rem;
+  }
+}
+
+/* ===== Pagination ===== */
+.pagination {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 2rem;
+  flex-wrap: wrap;
+}
+
+.pagination a {
+  padding: 0.4rem 0.8rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 0.9rem;
+}
+
+.pagination a.active {
+  background: #222;
+  color: #fff;
+  border-color: #222;
+}

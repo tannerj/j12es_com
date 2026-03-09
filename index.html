@@ -1,0 +1,45 @@
+---
+layout: default
+title: j12es.com
+pagination:
+  enabled: true
+---
+
+<section class="post-list">
+  {% for post in pagination.posts %}
+    <article class="post-preview">
+      <h2>
+        <a href="{{ post.url | relative_url }}">
+          {{ post.title }}
+        </a>
+      </h2>
+
+      <p class="post-date">
+        {{ post.date | date: "%B %d, %Y" }}
+      </p>
+
+      {% if post.image %}
+        <img src="{{ post.image | relative_url }}" alt="{{ post.title }}">
+      {% endif %}
+
+      <p class="post-description">
+        {{ post.description }}
+      </p>
+    </article>
+  {% endfor %}
+</section>
+
+<!-- Pagination Controls -->
+<div class="pagination">
+  {% if pagination.previous %}
+    <a href="{{ pagination.previous.url | relative_url }}" class="prev">
+      ← Newer Posts
+    </a>
+  {% endif %}
+
+  {% if pagination.next %}
+    <a href="{{ pagination.next.url | relative_url }}" class="next">
+      Older Posts →
+    </a>
+  {% endif %}
+</div>
