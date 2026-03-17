@@ -6,12 +6,15 @@ on:
 jobs:
   checkout-demo:
     runs-on: ubuntu-latest
+    env:
+      MY_NAME: Tanner
+
     steps:
+      - name: Print variable
+        run: echo "Hello $MY_NAME"
+
       - name:  Checkout repo
         uses: actions/checkout@v3
-
-      - name:  Step 2
-        run: echo "Step 2 running"
 
       - name:  List files
         run: ls -la
