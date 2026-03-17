@@ -22,6 +22,7 @@ jobs:
         run: ls -la
 
   job2:
+    needs: checkout-demo
     runs-on: ubuntu-latest
     steps:
       - run: echo "Job 2 running"
