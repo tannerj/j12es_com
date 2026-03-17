@@ -2,6 +2,8 @@ name: Build and Deploy
 
 on:
   push:
+    branches:
+      - main
 
 jobs:
   checkout-demo:
@@ -18,3 +20,8 @@ jobs:
 
       - name:  List files
         run: ls -la
+
+  job2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "Job 2 running"
