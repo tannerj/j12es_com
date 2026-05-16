@@ -6,23 +6,37 @@ on:
       - main
 
 jobs:
-  checkout-demo:
+  build-and-deploy:
     runs-on: ubuntu-latest
-    env:
-      MY_NAME: Tanner
 
     steps:
-      - name: Print variable
-        run: echo "Hello $MY_NAME"
+      - name: Checkout
+        uses: actions/checkout@v4
 
-      - name:  Checkout repo
-        uses: actions/checkout@v3
+      - name: Set up Ruby
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.3'
+          bundler-cache: true
 
-      - name:  List files
-        run: ls -la
+      - name: Build Jekyll site
+        run: bundle exec jekyll build
+        env:
+          JEKYLL_ENV: production
 
-  job2:
-    needs: checkout-demo
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo "Job 2 running"
+      - name: Configure AWS credentials
+        uses: aws-actions/configure-aws-credentials@v4
+        with:
+          aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
+          aws-region: ${{ secrets.AWS_REGION }}
+
+      - name: Sync to S3
+        run: |
+          aws s3 sync _site/ s3://${{ secrets.AWS_S3_BUCKET }} --delete
+
+      - name: Invalidate CloudFront cache
+        run: |
+          aws cloudfront create-invalidation \
+            --distribution-id ${{ secrets.CLOUDFRONT_DISTRIBUTION_ID }} \
+            --paths "/*"
