@@ -14,9 +14,9 @@ The idea behind the name is borrowed from martial arts. A kata is a practiced se
 
 The series starts with two articles that lay the groundwork for everything else.
 
-**[The Basics of Music Theory for Guitar](/2026/05/23/the-basics-of-music-theory-for-guitar/)** covers the raw materials of western music: the twelve notes, the difference between natural and accidental notes, semitones and whole tones, octaves, and how all of it maps onto the guitar neck. If terms like "sharp," "flat," or "half step" are fuzzy for you, this is the place to start.
+**[The Basics of Music Theory for Guitar](/2026/05/23/the-basics-of-music-theory-for-guitar.html)** covers the raw materials of western music: the twelve notes, the difference between natural and accidental notes, semitones and whole tones, octaves, and how all of it maps onto the guitar neck. If terms like "sharp," "flat," or "half step" are fuzzy for you, this is the place to start.
 
-**[The Major Scale for Guitarists](/2026/05/23/the-major-scale-for-guitarists/)** builds directly on that foundation. It introduces the major scale interval pattern — Whole Whole Half, Whole Whole Whole Half — and walks through how to apply it first on a piano keyboard, then on a single guitar string, then across the entire fretboard. It also covers the seven three-note-per-string shapes, which are the practical tool for actually playing the scale all over the neck.
+**[The Major Scale for Guitarists](/2026/05/23/the-major-scale-for-guitarists.html)** builds directly on that foundation. It introduces the major scale interval pattern — Whole Whole Half, Whole Whole Whole Half — and walks through how to apply it first on a piano keyboard, then on a single guitar string, then across the entire fretboard. It also covers the seven three-note-per-string shapes, which are the practical tool for actually playing the scale all over the neck.
 
 ## What's coming
 

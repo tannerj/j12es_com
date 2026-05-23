@@ -72,4 +72,4 @@ There is one last building block that we need before we move on from the basics,
 
 ## What's next?
 
-So we've defined some of the basic terms of music theory, what's next? Well from a theory standpoint, the next thing to learn is the major scale. The major scale is what I like to call ground zero of western music theory. It is what all other scales and chords use as a reference point. So if you've enjoyed this article and would like to learn about the next piece of the puzzle, check out <em><a href="/2026/05/23/the-major-scale-for-guitarists/">The Major Scale for guitarists</a></em>.
+So we've defined some of the basic terms of music theory, what's next? Well from a theory standpoint, the next thing to learn is the major scale. The major scale is what I like to call ground zero of western music theory. It is what all other scales and chords use as a reference point. So if you've enjoyed this article and would like to learn about the next piece of the puzzle, check out <em><a href="/2026/05/23/the-major-scale-for-guitarists.html">The Major Scale for guitarists</a></em>.
