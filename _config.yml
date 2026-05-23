@@ -28,6 +28,7 @@ twitter_username: jekyllrb
 github_username:  jekyll
 
 # Build settings
+permalink: /:year/:month/:day/:title/
 #theme: minima
 plugins:
   - jekyll-feed
@@ -35,6 +36,7 @@ plugins:
 
 pagination:
   enabled: true
+  collection: posts
   per_page: 5
   permalink: "/page/:num/"
   title: ":title - page :num"

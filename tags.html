@@ -1,0 +1,23 @@
+---
+layout: default
+title: Tags
+permalink: /tags.html
+---
+
+<section class="tag-list">
+  {% assign all_tags = site.posts | map: "tags" | flatten | uniq | sort %}
+  {% for tag in all_tags %}
+    <div class="tag-group" id="{{ tag | slugify }}">
+      <h2>{{ tag }}</h2>
+      <ul>
+        {% assign tagged_posts = site.posts | where_exp: "post", "post.tags contains tag" %}
+        {% for post in tagged_posts %}
+          <li>
+            <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+            <span class="post-date">— {{ post.date | date: "%B %d, %Y" }}</span>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  {% endfor %}
+</section>

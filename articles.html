@@ -1,11 +1,12 @@
 ---
 layout: default
-title: j12es.com
+title: Articles
+permalink: /articles.html
 ---
 
-<section class="post-list">
-  {% assign posts = site.posts | where_exp: "post", "post.category != 'articles'" %}
-  {% for post in posts %}
+<section class="post-list article-list">
+  {% assign articles = site.posts | where: "category", "articles" | reverse %}
+  {% for post in articles %}
     <article class="post-preview">
       <h2>
         <a href="{{ post.url | relative_url }}">

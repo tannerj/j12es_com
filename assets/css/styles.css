@@ -62,7 +62,7 @@ p {
 }
 
 .post-preview img {
-  width: 100%;
+  width: 512px;
   height: auto;
   margin: 1rem 0;
   border-radius: 6px;
